@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     ast (2.3.0)
     astrolabe (1.3.1)
@@ -48,6 +50,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -59,6 +62,13 @@ GEM
       bundler (~> 1.2)
       thor (~> 0.18)
     byebug (9.0.6)
+    capybara (2.14.4)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     code_analyzer (0.4.7)
       sexp_processor
     codeclimate-engine-rb (0.4.0)
@@ -78,7 +88,14 @@ GEM
     database_cleaner (1.6.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    devise (4.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.2)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.3)
+    docile (1.1.5)
     equalizer (0.0.11)
     erubis (2.7.0)
     eslint-rails (1.3.0)
@@ -91,6 +108,8 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.18)
     formatador (0.2.5)
     globalid (0.4.0)
@@ -123,8 +142,9 @@ GEM
       multi_json (~> 1.0)
       therubyracer (~> 0.12.1)
     json (2.1.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     libv8 (3.16.14.19)
-    libv8 (3.16.14.19-x86_64-linux)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -148,6 +168,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    orm_adapter (0.5.0)
     parser (2.4.0.0)
       ast (~> 2.2)
     pg (0.21.0)
@@ -156,6 +177,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -204,6 +226,9 @@ GEM
       rainbow (~> 2.0)
     ref (2.0.0)
     require_all (1.4.0)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -250,6 +275,18 @@ GEM
     scss_lint_reporter_checkstyle (0.2.0)
     sexp_processor (4.9.0)
     shellany (0.0.1)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
+    simplecov (0.14.1)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.1)
+    simplecov-json (0.2)
+      json
+      simplecov
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     slop (3.6.0)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -282,6 +319,8 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -290,6 +329,8 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    xpath (2.1.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -300,14 +341,18 @@ DEPENDENCIES
   brakeman
   bundler-audit
   byebug
+  capybara
   coffee-rails (~> 4.2)
   database_cleaner
+  devise
   eslint-rails
   factory_girl_rails
+  faker
   guard-rspec
   jbuilder (~> 2.5)
   jquery-rails
   jshint
+  launchy
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
   pg
@@ -324,6 +369,10 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   scss_lint
   scss_lint_reporter_checkstyle
+  shoulda-matchers
+  simplecov
+  simplecov-json
+  simplecov-rcov
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

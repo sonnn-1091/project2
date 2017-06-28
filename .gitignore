@@ -16,6 +16,8 @@
 /.framgia-ci-reports
 /config/database.yml
 /config/secrets.yml
+/coverage
+/.framgia-ci-result.temp.yml
 
 # Ignore Byebug command history file.
 .byebug_history
