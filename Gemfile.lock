@@ -56,6 +56,9 @@ GEM
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
     bindex (0.5.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     brakeman (3.6.2)
     builder (3.2.3)
     bundler-audit (0.5.0)
@@ -111,6 +114,8 @@ GEM
     faker (1.7.3)
       i18n (~> 0.5)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     formatador (0.2.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -338,6 +343,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   better_errors
+  bootstrap-sass (= 3.3.7)
   brakeman
   bundler-audit
   byebug
@@ -348,6 +354,7 @@ DEPENDENCIES
   eslint-rails
   factory_girl_rails
   faker
+  font-awesome-rails
   guard-rspec
   jbuilder (~> 2.5)
   jquery-rails
