@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"><%= t ".toggle" %></span>
+        <%= t ".menu" %> <i class="fa fa-bars"></i>
+      </button>
+      <%= link_to t(".glog"), root_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t(".home"), root_path %></li>
+        <li><%= link_to t(".about"), about_path %></li>
+        <li><%= link_to t(".user"), "#" %></li>
+        <li><%= link_to t(".sign_up"), "#" %></li>
+        <li><%= link_to t(".log_in"), "#" %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
