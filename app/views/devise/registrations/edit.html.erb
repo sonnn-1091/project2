@@ -1,0 +1,40 @@
+<div class="log-bg">
+  <h2><%= t ".edit" %> <%= resource_name.to_s.humanize %></h2>
+  <div class="form-area">
+    <%= form_for resource, as: resource_name, url: edit_path,
+      html: {method: :put} do |f| %>
+      <div class="error-messages">
+        <%= devise_error_messages! %>
+      </div>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password %> <i>(<%= t ".blank" %>)</i>
+        <%= f.password_field :password, autocomplete: "off" %>
+        <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %> <%= t ".min" %></em>
+        <% end %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+      <div class="field">
+        <%= f.label :current_password %> <i>(<%= t ".confirm" %>)</i>
+        <%= f.password_field :current_password, autocomplete: "off" %>
+      </div>
+      <div class="actions">
+        <%= f.submit t(".update") %>
+      </div>
+    <% end %>
+    <div class="log-in-sign">
+      <%= link_to t(".back"), :back %>
+    </div>
+  </div>
+</div>
