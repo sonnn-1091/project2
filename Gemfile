@@ -7,11 +7,13 @@ end
 
 gem "bootstrap-sass", "3.3.7"
 gem "coffee-rails", "~> 4.2"
+gem "config"
 gem "devise"
 gem "font-awesome-rails"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "mysql2", ">= 0.3.18", "< 0.5"
+gem "omniauth-facebook"
 gem "puma", "~> 3.0"
 gem "rails", "~> 5.0.4"
 gem "sass-rails", "~> 5.0"

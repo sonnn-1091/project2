@@ -8,6 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :remember_digest
       t.boolean :is_admin
       t.boolean :status
+      t.datetime :remember_created_at
 
       t.timestamps null: false
     end
