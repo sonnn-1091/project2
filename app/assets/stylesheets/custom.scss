@@ -1,2 +1,73 @@
 @import 'bootstrap';
 @import 'bootstrap-sprockets';
+@import 'color';
+
+.delay {
+  transition: all .2s linear;
+}
+
+.log-bg {
+  background-image: url('log-page.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  min-height: 100%;
+  padding: 100px 0 240px;
+  text-align: center;
+
+  h2 {
+    margin-top: 0 0 35px;
+  }
+
+  input {
+    background: transparent;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    outline: none;
+    width: 100%;
+  }
+
+  label {
+    font-style: italic;
+  }
+}
+
+.form-area {
+  margin: 0 auto;
+  text-align: left;
+  width: 400px;
+}
+
+.actions {
+  padding-top: 10px;
+
+  input {
+    background: $white;
+    border-bottom: 0;
+    color: $black;
+    padding: 5px 0;
+
+    &:hover {
+      background: $gray-dark;
+      color: $white;
+    }
+  }
+}
+
+.log-in-sign {
+  font-size: 16px;
+  font-style: italic;
+  text-align: right;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.remember-text {
+  font-size: 16px;
+  font-style: italic;
+}

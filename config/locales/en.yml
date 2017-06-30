@@ -1,4 +1,6 @@
 en:
+  sign_in: "Log in"
+  sign_up: "Sign up"
   layouts:
     header:
       glog: "Glog"
@@ -19,3 +21,15 @@ en:
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?"
       text_next: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!"
       t_next: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et."
+  devise:
+    registrations:
+      new:
+        sign_up: "Sign up"
+    shared:
+      links:
+        log: "Log in"
+        sign: "Sign up"
+        forgot_pass: "Forgot your password?"
+        confirm: "Didn't receive confirmation instructions?"
+        unlock: "Didn't receive unlock instructions?"
+        sign_with: "Sign in with %{omni}"

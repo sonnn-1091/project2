@@ -3,6 +3,7 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
@@ -412,4 +413,18 @@ body {
 
 .about-bg {
   background-image: url('about-bg.jpg');
+}
+
+.remember-check {
+  display: inline-block !important;
+  width: auto !important;
+}
+
+.log-bg input{
+  border: 0;
+  border-bottom: 1px solid white;
+}
+
+.actions input {
+  border: 0 !important;
 }
