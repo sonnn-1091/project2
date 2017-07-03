@@ -10,7 +10,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    url = "fallback/" << [version_name, Settings.user.no_avatar].compact.join("_")
+    url = "assets/fallback/" << [version_name, Settings.user.no_avatar].compact.join("_")
     ActionController::Base.helpers.asset_path url
   end
 end
