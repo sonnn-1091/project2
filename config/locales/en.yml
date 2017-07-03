@@ -35,6 +35,7 @@ en:
         confirm: "To confirm changes"
         back: "Back"
         update: "Update"
+        change_pic: "Change picture"
     sessions:
       new:
         login: "Log in"
