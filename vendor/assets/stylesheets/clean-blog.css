@@ -428,3 +428,30 @@ body {
 .actions input {
   border: 0 !important;
 }
+
+.btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus,
+.btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
+.open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focus,
+.open > .btn-primary.dropdown-toggle.focus {
+  background: transparent;
+  border-color: white;
+  border: 1px solid $white !important;
+  outline: 0
+}
+
+.dropdown-menu {
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid white;
+  min-width: 119px !important;
+}
+
+.account-button .dropdown-menu a {
+  padding: 10px !important;
+  color: white !important;
+}
+
+.account-button .dropdown-menu li:hover a {
+  color: #333333 !important;
+  background: white;
+}

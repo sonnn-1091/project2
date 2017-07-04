@@ -71,3 +71,44 @@
   font-size: 16px;
   font-style: italic;
 }
+
+.field > div {
+
+  label {
+    color: $red;
+  }
+}
+
+.error-messages {
+
+  h2 {
+    font-size: 16px;
+  }
+
+  ul {
+    color: $red;
+    font-size: 18px;
+  }
+}
+
+.account-button {
+  button {
+    background: transparent;
+    border: 1px solid transparent;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 19px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent;
+      border: 1px solid $white;
+    }
+  }
+
+  .dropdown-menu {
+    margin: 0;
+    padding: 0;
+  }
+}

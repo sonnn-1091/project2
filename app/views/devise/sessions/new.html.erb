@@ -1,0 +1,27 @@
+<div class="log-bg">
+  <h2><%= t ".sign_in" %></h2>
+  <div class="form-area">
+    <%= form_for resource, as: resource_name, url: signin_path do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me, class: "remember-check" %>
+          <%= f.label :remember_me, class: "remember-text" %>
+        </div>
+      <% end %>
+      <div class="actions">
+        <%= f.submit t(".login"), class: "delay" %>
+      </div>
+    <% end %>
+    <div class="log-in-sign">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

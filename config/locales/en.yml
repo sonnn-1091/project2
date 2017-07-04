@@ -9,6 +9,9 @@ en:
       sign_up: "sign up"
       log_in: "log in"
       about: "about"
+      account: "account"
+      setting: "setting"
+      profile: "profile"
     footer:
       copyright: "Copyright by Your Website 2016"
   static_pages:
@@ -25,6 +28,16 @@ en:
     registrations:
       new:
         sign_up: "Sign up"
+      edit:
+        edit: "Edit"
+        blank: "Fill if you change your password"
+        min: "characters minimum"
+        confirm: "To confirm changes"
+        back: "Back"
+        update: "Update"
+    sessions:
+      new:
+        login: "Log in"
     shared:
       links:
         log: "Log in"
