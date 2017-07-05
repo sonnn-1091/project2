@@ -1,4 +1,7 @@
 en:
+  time:
+    formats:
+      date_month_year: "%d/%m/%Y"
   sign_in: "Log in"
   sign_up: "Sign up"
   layouts:
@@ -47,3 +50,7 @@ en:
         confirm: "Didn't receive confirmation instructions?"
         unlock: "Didn't receive unlock instructions?"
         sign_with: "Sign in with %{omni}"
+  users:
+    show:
+      joined: "Joined"
+      posted: "Posted"

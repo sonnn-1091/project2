@@ -13,4 +13,6 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: Settings.user.max_name_length}
 
   mount_uploader :avatar, PictureUploader
+
+  scope :id_sort, ->{order id: :asc}
 end
