@@ -6,6 +6,11 @@
       <div class="error-messages">
         <%= devise_error_messages! %>
       </div>
+      <div class="picture">
+        <%= image_tag resource.avatar, alt: resource.name %>
+        <%= f.label :avatar, t(".change_pic"), class: "change-btn" %>
+        <%= f.file_field :avatar, id: "user_avatar", accept: "image/jpeg,image/gif,image/png" %>
+      </div>
       <div class="field">
         <%= f.label :name %>
         <%= f.text_field :name, autofocus: true %>

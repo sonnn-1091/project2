@@ -7,7 +7,7 @@
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
-  color: #333333;
+  color: #333;
 }
 p {
   line-height: 1.5;
@@ -26,7 +26,7 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #333333;
+  color: #333;
 }
 a:hover,
 a:focus {
@@ -37,7 +37,7 @@ a img:focus {
   cursor: zoom-in;
 }
 blockquote {
-  color: #777777;
+  color: #777;
   font-style: italic;
 }
 hr.small {
@@ -58,7 +58,7 @@ hr.small {
   font-weight: 800;
 }
 .navbar-custom .navbar-header .navbar-toggle {
-  color: #777777;
+  color: #777;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 12px;
@@ -91,7 +91,7 @@ hr.small {
     color: rgba(255, 255, 255, 0.8);
   }
   .navbar-custom .nav li ul.dropdown-menu a {
-    color: #333333;
+    color: #333;
   }
   .navbar-custom .nav li ul.dropdown-menu a:hover,
   .navbar-custom .nav li ul.dropdown-menu a:focus {
@@ -146,7 +146,7 @@ hr.small {
   }
 }
 .intro-header {
-  background-color: #777777;
+  background-color: #777;
   background: no-repeat center center;
   background-attachment: scroll;
   -webkit-background-size: cover;
@@ -224,7 +224,7 @@ hr.small {
   }
 }
 .post-preview > a {
-  color: #333333;
+  color: #333;
 }
 .post-preview > a:hover,
 .post-preview > a:focus {
@@ -242,14 +242,14 @@ hr.small {
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {
-  color: #777777;
+  color: #777;
   font-size: 18px;
   font-style: italic;
   margin-top: 0;
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
-  color: #333333;
+  color: #333;
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
@@ -381,8 +381,8 @@ form .row:first-child .floating-label-form-group {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #777777;
-  background-color: #333333;
+  color: #777;
+  background-color: #333;
   cursor: not-allowed;
 }
 ::-moz-selection {
@@ -447,11 +447,15 @@ body {
 }
 
 .account-button .dropdown-menu a {
-  padding: 10px !important;
   color: white !important;
+  padding: 10px !important;
 }
 
 .account-button .dropdown-menu li:hover a {
-  color: #333333 !important;
   background: white;
+  color: #333 !important;
+}
+
+.picture input {
+  border-bottom: 0 !important;
 }
