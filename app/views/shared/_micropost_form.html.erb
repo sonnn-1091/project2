@@ -1,0 +1,29 @@
+<div class="post-form">
+  <%= form_for post, url: posts_path do |f| %>
+    <%= render "shared/error_messages" %>
+    <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <%= f.label :title, t(".title") %>
+        <%= f.text_field :title, placeholder: t(".title"), class: "form-control" %>
+      </div>
+    </div>
+    <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <%= f.label :content, t(".create_post") %>
+        <%= f.text_area :content, placeholder: t(".create_post"), class: "form-control tinymce" %>
+      </div>
+    </div>
+    <div class="row control-group">
+      <span class="picture-post" data-attribute = "<%= Settings.picture.size %>">
+        <%= f.file_field :picture, accept: "image/jpeg, image/gif, image/png, image/jpg" %>
+      </span>
+    </div>
+    <div class="row">
+      <div class="form-group col-xs-12 image-upload">
+        <%= f.submit t(".post"), class: "btn btn-default" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= tinymce %>

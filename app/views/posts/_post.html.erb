@@ -1,0 +1,12 @@
+<div class="post-preview">
+  <%= link_to post do %>
+    <h2 class="post-title"><%= post.title %></h2>
+  <% end %>
+  <p class="post-meta"><%= t ".posted_by" %> <%= link_to user.name, user %>
+    <%= time_ago_in_words post.created_at %> <%= t ".ago" %></p>
+  <% if can? :delete, post %>
+    <%= link_to t(".delete"), post, method: :delete,
+      class: "post-meta delete-button", data: {confirm: t(".sure")} %>
+  <% end %>
+</div>
+<hr>

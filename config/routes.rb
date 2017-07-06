@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     put "edit", to: "devise/registrations#update"
   end
   resources :users, only: [:index, :show]
+  resources :posts, only: [:show, :create, :destroy]
 end

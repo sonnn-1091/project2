@@ -1,0 +1,20 @@
+<header class="intro-header" style="background-image: url(<%= @post.picture %>)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1><%= @post.title %></h1>
+          <span class="meta"><%= t ".posted_by" %> <a href="#"><%= @post.user.name %></a> <%= time_ago_in_words @post.created_at %> <%= t ".ago" %> </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <%= raw @post.content %>
+    </div>
+  </div>
+</div>
