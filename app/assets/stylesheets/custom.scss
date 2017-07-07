@@ -210,12 +210,13 @@
 .pro-info {
   float: left;
   font-weight: 700;
-  margin-top: -100px;
+  margin-top: -135px;
   padding-left: 5px;
+  width: 55%;
 
   h3 {
     color: $white;
-    line-height: 20px;
+    line-height: 28px;
     margin: 0 0 10px;
   }
 
@@ -246,4 +247,28 @@
   input {
     width: 100%;
   }
+}
+
+.follow-info {
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%;
+
+  a {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.follow-form {
+  input {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.info-list {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
 }

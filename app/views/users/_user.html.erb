@@ -3,6 +3,11 @@
     <%= image_tag user.avatar, class: "delay" %>
     <div class="user-info">
       <%= link_to user.name, user %>
+      <p class="info-list"><%= t ".joined" %>: <%= l user.created_at,
+        format: :date_month_year %></p>
+      <p class="info-list"><%= t ".following" %>: <%= user.following.size %>
+        | <%= t ".follower" %>: <%= user.followers.size %></p>
+      <p class="info-list"><%= t ".posts" %>: <%= user.posts.size %></p>
     </div>
   </div>
 </li>

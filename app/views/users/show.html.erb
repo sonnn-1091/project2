@@ -5,14 +5,22 @@
   <div class="user-profile">
     <div class="row">
       <div class="col-md-4">
-        <div class="avatar-pro">
-          <%= image_tag @user.avatar %>
-        </div>
-        <div class="pro-info">
-          <h3><%= @user.name %></h3>
-          <p><i><%= t ".joined" %>: <%= l @user.created_at,
-            format: :date_month_year %></i></p>
-          <p><%= t ".posted" %>:</p>
+        <div class="user-infor">
+          <div class="avatar-pro">
+            <%= image_tag @user.avatar %>
+          </div>
+          <div class="pro-info">
+            <h3><%= @user.name %></h3>
+            <p><i><%= t ".joined" %>: <%= l @user.created_at,
+              format: :date_month_year %></i></p>
+            <p><%= t ".posted" %>:</p>
+          </div>
+          <div class="follow-form-div">
+            <%= render "follow_form", user: @user if user_signed_in? %>
+          </div>
+          <div class="follow-info">
+            <%= render "shared/stats", user: @user%>
+          </div>
         </div>
       </div>
       <div class="col-md-8">

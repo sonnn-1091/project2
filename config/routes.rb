@@ -10,6 +10,11 @@ Rails.application.routes.draw do
     get "edit", to: "devise/registrations#edit"
     put "edit", to: "devise/registrations#update"
   end
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show] do
+    member do
+      get :following, :followers
+    end
+  end
   resources :posts, only: [:show, :create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 end
