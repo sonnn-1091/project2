@@ -54,6 +54,13 @@ en:
     show:
       joined: "Joined"
       posted: "Posted"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    user:
+      follower: "Followers"
+      following: "Following"
   posts:
     post:
       posted_by: "Posted by"
@@ -65,6 +72,9 @@ en:
     create:
       success: "You've posted to your timeline!"
       fail: "Failed to create post! Title or content could not be empty!"
+    show:
+      posted_by: "Posted by"
+      ago: "ago"
   shared:
     micropost_form:
       post: "Post"
