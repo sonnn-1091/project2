@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require tinymce-jquery
 //= require clean-blog
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:request-end', function() {
+  if (tinyMCE) {tinyMCE.remove();}
+});

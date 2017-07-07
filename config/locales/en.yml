@@ -54,3 +54,19 @@ en:
     show:
       joined: "Joined"
       posted: "Posted"
+  posts:
+    post:
+      posted_by: "Posted by"
+      ago: "ago"
+      delete: "Delete"
+    show:
+      posted_by: "Posted by"
+      ago: "ago"
+    create:
+      success: "You've posted to your timeline!"
+      fail: "Failed to create post! Title or content could not be empty!"
+  shared:
+    micropost_form:
+      post: "Post"
+      title: "Title"
+      create_post: "What are you thinking about..."

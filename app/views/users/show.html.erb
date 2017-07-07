@@ -16,6 +16,8 @@
         </div>
       </div>
       <div class="col-md-8">
+        <%= render @posts, user: @user %>
+        <%= will_paginate @posts %>
       </div>
     </div>
   </div>

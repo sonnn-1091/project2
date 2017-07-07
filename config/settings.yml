@@ -2,3 +2,10 @@ user:
   max_name_length: 50
   no_avatar: "default.jpg"
   per_page: 10
+micropost:
+  max_title_length: 100
+  max_content_length: 500
+  post_per_page: 5
+  post_default: "post.jpg"
+picture:
+  size: 5

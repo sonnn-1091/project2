@@ -165,7 +165,7 @@
 }
 
 .user-block {
-  border-bottom: 3px solid $border-user;
+  border-bottom: 3px solid $light-gray;
   overflow: hidden;
   padding: 5px 0;
 
@@ -233,5 +233,17 @@
 
   img {
     height: 150px;
+  }
+}
+
+.picture-post {
+  input {
+    margin: 7px 15px;
+  }
+}
+
+.image-upload {
+  input {
+    width: 100%;
   }
 }
