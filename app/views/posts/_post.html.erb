@@ -8,5 +8,6 @@
     <%= link_to t(".delete"), post, method: :delete,
       class: "post-meta delete-button", data: {confirm: t(".sure")} %>
   <% end %>
+  <p class="post-meta"><%= post.comments.size %> <%= t ".comments" %></p>
 </div>
 <hr>

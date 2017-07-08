@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   before_action :load_post, only: [:show, :destroy]
 
   def show
+    comments = @post.comments.select :id, :user_id, :post_id, :content, :created_at
+    @comments = comments.order created_at: :asc
   end
 
   def create

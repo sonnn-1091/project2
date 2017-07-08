@@ -1,0 +1,13 @@
+<%= form_for [post, post.comments.build] do |f| %>
+  <div class="field comment-form">
+    <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
+        <label><%= t ".comment" %></label>
+        <%= f.text_area :content, placeholder: t(".create_post"),
+          class: "form-control", id: "cmt-content" %>
+      </div>
+    </div>
+  </div>
+  <%= f.button t(".post"), class: "btn btn-primary", id: "submit-cmt",
+    post_id: post.id, edit: "false" %>
+<% end %>

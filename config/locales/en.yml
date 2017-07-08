@@ -66,6 +66,7 @@ en:
       posted_by: "Posted by"
       ago: "ago"
       delete: "Delete"
+      delete: "Do you want to delete this comment?"
     show:
       posted_by: "Posted by"
       ago: "ago"
@@ -80,3 +81,13 @@ en:
       post: "Post"
       title: "Title"
       create_post: "What are you thinking about..."
+  comments:
+    form:
+      post: "Comment"
+      create_post: "Leave your comments"
+    form_edit:
+      create_post: "Text to edit"
+      post: "Edit"
+    comment:
+      commented: "Commented"
+      ago: "ago"
