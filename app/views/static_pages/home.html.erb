@@ -15,9 +15,19 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="post-area">
-        <%= render "shared/micropost_form", post: @post if user_signed_in? %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="post-area">
+          <%= render "shared/micropost_form", post: @post %>
+        </div>
+        <div class="feed-item" page="<%= @page %>" total ="<%= @feed_items.total_pages %>"
+          id="view-check" view ="feed">
+          <%= render "shared/feed", post: @feed_items %>
+        </div>
+        <div class="loading-img">
+          <%= image_tag "loading.gif", id: "loading", class: "load-img" %>
+        </div>
+        <%= paginate @feed_items %>
+      <% end %>
     </div>
   </div>
 </div>
