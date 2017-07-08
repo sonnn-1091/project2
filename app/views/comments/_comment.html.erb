@@ -1,0 +1,18 @@
+<div class="comment-item" id="comment-<%= comment.id %>">
+  <div class="avatar-cmt">
+    <%= link_to comment.user do %>
+      <%= image_tag comment.user.avatar %>
+    <% end %>
+  </div>
+  <div class="content-cmt">
+    <%= link_to comment.user.name %>
+    <p><%= comment.content %></p>
+    <span><i><%= t ".commented" %> <%= time_ago_in_words comment.created_at %>
+      <%= t ".ago" %></i></span>
+    <span class="edit-btn" id_cmt = "<%= comment.id %>" post_id = "<%= comment.post_id %>">
+      <i><%= t ".edit" %></i></span>
+    <span class="delete-btn" id="<%= comment.id %>" post_id = "<%= comment.post_id %>">
+      <i><%= t ".delete" %></i></span>
+  </div>
+</div>
+<hr>

@@ -272,3 +272,66 @@
   line-height: 20px;
   margin: 0;
 }
+
+.comment-item {
+  overflow: hidden;
+}
+
+.avatar-cmt {
+  border: 2px solid $gray-dark;
+  border-radius: 100%;
+  float: left;
+  padding: 3px;
+  width: 10%;
+
+  img {
+    border-radius: 100%;
+    width: 100%;
+  }
+}
+
+.content-cmt {
+  float: left;
+  padding-left: 15px;
+  width: 90%;
+
+  a {
+    font-size: 28px;
+    line-height: 10px;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+
+  span {
+    color: $light-gray;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 0;
+  }
+}
+
+.delete-btn {
+  span {
+    &:hover {
+      color: $blue-link;
+      cursor: pointer;
+    }
+  }
+}
+
+.edit-btn {
+  span {
+    &:hover {
+      color: $blue-link;
+      cursor: pointer;
+    }
+  }
+}
+
+.list-cmt {
+  max-height: 450px;
+  overflow-y: scroll;
+}

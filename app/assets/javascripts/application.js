@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require tinymce-jquery
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require clean-blog
 //= require_tree .
 

@@ -4,7 +4,8 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
           <h1><%= @post.title %></h1>
-          <span class="meta"><%= t ".posted_by" %> <a href="#"><%= @post.user.name %></a> <%= time_ago_in_words @post.created_at %> <%= t ".ago" %> </span>
+          <span class="meta"><%= t ".posted_by" %> <a href="#"><%= @post.user.name %></a>
+            <%= time_ago_in_words @post.created_at %> <%= t ".ago" %> </span>
         </div>
       </div>
     </div>
@@ -15,6 +16,20 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <%= raw @post.content %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <h4><%= t ".comments" %> (<span class="cmt-count"><%= @post.comments.size %></span>)</h4>
+      <hr>
+      <div class="list-cmt">
+        <%= render @comments, post: @post %>
+      </div>
+      <% if user_signed_in? %>
+        <div class="comment-form">
+          <%= render "comments/form", post: @post %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
