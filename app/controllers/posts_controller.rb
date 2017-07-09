@@ -11,10 +11,11 @@ class PostsController < ApplicationController
 
     if post.save
       flash[:success] = t ".success"
+      redirect_to post
     else
       flash[:danger] = t ".fail"
+      redirect_to root_url
     end
-    redirect_to root_url
   end
 
   def destroy

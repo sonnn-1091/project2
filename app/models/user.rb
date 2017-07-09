@@ -16,6 +16,12 @@ class User < ApplicationRecord
 
   scope :id_sort, ->{order id: :asc}
 
+  def feed
+    following_ids = "SELECT followed_id FROM relationships
+      WHERE follower_id = :user_id"
+    Post.load_feed id, following_ids
+  end
+
   def follow other_user
     following << other_user
   end

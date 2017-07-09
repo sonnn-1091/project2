@@ -23,3 +23,9 @@
 $(document).on('turbolinks:request-end', function() {
   if (tinyMCE) {tinyMCE.remove();}
 });
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').slideUp();
+  }, 2000);
+})

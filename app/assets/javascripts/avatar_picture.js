@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(document).ready(function(){
   $('#user_avatar').change(function(){
     var input = $(this);
     var file = input[0].files[0];

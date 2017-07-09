@@ -24,14 +24,16 @@
         </div>
       </div>
       <div class="col-md-8">
-        <div class="list-post" page="<%= @page %>" total ="<%= @posts.total_pages %>"
-          id="view-check" view ="post">
-          <%= render @posts %>
-        </div>
-        <div class="loading-img">
-          <%= image_tag "loading.gif", id: "loading", class: "load-img" %>
-        </div>
-        <%= paginate @posts %>
+        <ul class="users-list" page="<%= @page %>" total ="<%= @users.total_pages %>"
+          id="view-check" view ="follow">
+          <div class="row">
+            <%= render @users %>
+          </div>
+          <div class="loading-img">
+            <%= image_tag "loading.gif", id: "loading", class: "load-img" %>
+          </div>
+        </ul>
+        <%= paginate @users %>
       </div>
     </div>
   </div>
