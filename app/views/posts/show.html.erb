@@ -4,6 +4,11 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
           <h1><%= @post.title %></h1>
+          <h2 class="subheading">
+            <% @post.tags.each do |tag| %>
+              <%= link_to tag.name, tag %>
+            <% end %>
+          </h2>
           <span class="meta"><%= t ".posted_by" %> <a href="#"><%= @post.user.name %></a>
             <%= time_ago_in_words @post.created_at %> <%= t ".ago" %> </span>
         </div>
@@ -26,9 +31,11 @@
         <%= render @comments, post: @post %>
       </div>
       <% if user_signed_in? %>
-        <div class="comment-form">
-          <%= render "comments/form", post: @post %>
-        </div>
+        <% if current_user.following? @post.user or current_user == @post.user %>
+          <div class="comment-form">
+            <%= render "comments/form", post: @post %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

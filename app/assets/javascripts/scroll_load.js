@@ -2,10 +2,10 @@ $(document).ready(function(){
   $(window).scroll(function() {
     if($(document).height() - $(window).height() == $(window).scrollTop()){
       var view = $('#view-check').attr('view');
-      var current, total;
+      var total = $('#view-check').attr('total');
+      var current;
       if(view === 'user'){
         current = $('.users-list').attr('page');
-        total = $('#view-check').attr('total');
         if(current === '' || current === 1){
           current = 2;
           load_users(current);
@@ -19,7 +19,6 @@ $(document).ready(function(){
       }
       if(view === 'post'){
         current = $('.list-post').attr('page');
-        total = $('#view-check').attr('total');
         var user_id = $('.user-profile').attr('user_id');
         if(current === '' || current === 1){
           current = 2;
@@ -34,7 +33,6 @@ $(document).ready(function(){
       }
       if(view === 'feed'){
         current = $('.feed-item').attr('page');
-        total = $('#view-check').attr('total');
         if(current === '' || current === 1){
           current = 2;
           load_feeds(current);
@@ -43,6 +41,20 @@ $(document).ready(function(){
           if(parseInt(current) < parseInt(total)){
             current ++;
             load_feeds(current);
+          }
+        }
+      }
+      if(view === 'tag'){
+        current = $('.list-post').attr('page');
+        var tag_id = $('.feed-item').attr('tag_id');
+        if(current === '' || current === 1){
+          current = 2;
+          load_tags(current, tag_id);
+        }
+        else{
+          if(parseInt(current) < parseInt(total)){
+            current ++;
+            load_tags(current, tag_id);
           }
         }
       }
@@ -89,6 +101,23 @@ function load_feeds(current){
   setTimeout(function() {
     $.ajax({
       url: '/',
+      type: 'GET',
+      dataType: 'json',
+      data: {page: current, load: true},
+    })
+      .done(function(data) {
+        $('.feed-item').append(data.post);
+        $('.feed-item').attr('page', current);
+        $('.loading-img').fadeOut();
+      });
+  }, 1000);
+}
+
+function load_tags(current, tag_id){
+  $('.loading-img').fadeIn();
+  setTimeout(function() {
+    $.ajax({
+      url: '/tags/' + tag_id,
       type: 'GET',
       dataType: 'json',
       data: {page: current, load: true},

@@ -344,3 +344,26 @@
   display: block;
   margin: 10px auto;
 }
+
+.btn-tag {
+  border: 0;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  z-index: 9999;
+}
+
+.subheading {
+  a {
+    color: $white;
+  }
+}
+
+.post-subtitle {
+  font-weight: 300;
+}
+
+.post-meta {
+  margin-bottom: 10px;
+}

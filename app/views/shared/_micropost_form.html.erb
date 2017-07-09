@@ -9,6 +9,12 @@
     </div>
     <div class="row control-group">
       <div class="form-group col-xs-12 floating-label-form-group controls">
+        <%= f.label :all_tags, t(".title") %>
+        <%= f.text_field :all_tags, placeholder: t(".tag_name"), class: "form-control" %>
+      </div>
+    </div>
+    <div class="row control-group">
+      <div class="form-group col-xs-12 floating-label-form-group controls">
         <%= f.label :content, t(".create_post") %>
         <%= f.text_area :content, placeholder: t(".create_post"), class: "form-control tinymce" %>
       </div>
