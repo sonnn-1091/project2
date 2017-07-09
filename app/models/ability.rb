@@ -1,10 +1,9 @@
 class Ability
   include CanCan::Ability
 
-  alias_action :update, :destroy, to: :modify
-  alias_action :create, :modify, to: :full_pri
-
   def initialize user
+    alias_action :update, :destroy, to: :modify
+    alias_action :create, :modify, to: :full_pri
     return unless user
     if user.is_admin
       can :destroy, [Post, Comment]
