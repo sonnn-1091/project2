@@ -2,6 +2,11 @@
   <%= link_to post do %>
     <h2 class="post-title"><%= post.title %></h2>
   <% end %>
+  <h3 class="post-subtitle"><span><%= t ".tag" %></span>
+    <% post.tags.each do |tag| %>
+      <%= link_to tag.name, tag %>
+    <% end %>
+  </h3>
   <p class="post-meta"><%= t ".posted_by" %> <%= link_to post.user.name, post.user %>
     <%= time_ago_in_words post.created_at %> <%= t ".ago" %></p>
   <% if can? :delete, post %>

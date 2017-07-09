@@ -20,7 +20,6 @@ class UsersController < ApplicationController
     @title = t ".following"
     users = @user.following.select(:id, :email, :name, :created_at).id_sort
     @users = users.page(params[:page]).per Settings.user.per_page
-    @page = params[:page]
     render :show_follow, locals: {user: @user}
   end
 
@@ -28,7 +27,6 @@ class UsersController < ApplicationController
     @title = t ".followers"
     users = @user.followers.select(:id, :email, :name, :created_at).id_sort
     @users = users.page(params[:page]).per Settings.user.per_page
-    @page = params[:page]
     render :show_follow
   end
 end
