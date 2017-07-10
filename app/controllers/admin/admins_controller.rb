@@ -8,6 +8,9 @@ class Admin::AdminsController < ApplicationController
       format.html
       format.csv{send_data @products.to_csv}
       format.xls{send_data @products.to_csv(col_sep: "\t")}
-  end
+    end
+    @by_week = User.group_by_week(:created_at).size
+    @by_day = User.group_by_day_of_week(:created_at, format: "%a").size
+    @active_user = User.group(:status).size
   end
 end

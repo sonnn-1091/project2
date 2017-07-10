@@ -8,7 +8,7 @@
   <td><%= link_to post.user.name, post.user %></td>
   <td><%= post.created_at.to_formatted_s :db %></td>
   <td>
-    <%= link_to t(".delete"), post, method: :delete,
+    <%= link_to t(".delete"), admin_post_path(post), method: :delete,
       class: "post-meta delete-button", data: {confirm: t(".sure")} %>
   </td>
 </tr>
