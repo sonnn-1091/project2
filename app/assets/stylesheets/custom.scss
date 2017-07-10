@@ -367,3 +367,29 @@
 .post-meta {
   margin-bottom: 10px;
 }
+
+.user-admin {
+  padding-top: 100px;
+
+  table {
+    img {
+      height: 50px;
+    }
+  }
+}
+
+.status-change {
+  cursor: pointer;
+
+  &:hover {
+    color: $blue-link;
+  }
+}
+
+.delete-post {
+  cursor: pointer;
+
+  &:hover {
+    color: $blue-link;
+  }
+}

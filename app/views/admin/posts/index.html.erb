@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="user-admin">
+      <span><%= t ".total_posts" %>: <%= @posts.total_count %></span>
+      <%= link_to t(".users"), admin_root_url %>
+      <%= paginate @posts %>
+      <table class="table table-hover">
+        <thead>
+          <th><%= t ".title" %></th>
+          <th><%= t ".tags" %></th>
+          <th><%= t ".user" %></th>
+          <th><%= t ".created_at" %></th>
+          <th><%= t ".delete" %></th>
+        </thead>
+        <tbody>
+          <%= render @posts %>
+        </tbody>
+      </table>
+      <%= paginate @posts %>
+      </div>
+    </div>
+  </div>
+</div>

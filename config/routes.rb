@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get "edit", to: "devise/registrations#edit"
     put "edit", to: "devise/registrations#update"
   end
-  resources :users, only: [:index, :show] do
+  resources :users, only: [:index, :show, :update] do
     member do
       get :following, :followers
     end
@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   end
   resources :relationships, only: [:create, :destroy]
   resources :tags, only: :show
+  namespace :admin do
+    root "admins#index", as: :root
+    resources :posts, only: [:index, :destroy]
+  end
 end
