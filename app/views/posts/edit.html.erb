@@ -1,0 +1,11 @@
+<div class="container edit-page">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <% if user_signed_in? %>
+        <div class="post-area">
+          <%= render "shared/micropost_form", post: @post %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

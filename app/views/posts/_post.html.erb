@@ -9,7 +9,8 @@
   </h3>
   <p class="post-meta"><%= t ".posted_by" %> <%= link_to post.user.name, post.user %>
     <%= time_ago_in_words post.created_at %> <%= t ".ago" %></p>
-  <% if can? :delete, post %>
+  <% if can? :modify, post %>
+    <%= link_to t(".edit"), edit_post_url(post), class: "post-meta"%>
     <%= link_to t(".delete"), post, method: :delete,
       class: "post-meta delete-button", data: {confirm: t(".sure")} %>
   <% end %>

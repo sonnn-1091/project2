@@ -1,13 +1,13 @@
 class CommentsController < ApplicationController
   before_action :load_post, only: [:create, :update, :destroy]
   before_action :load_cmt, only: [:update, :destroy]
-  load_and_authorize_resource except: [:index, :new, :create]
+  load_and_authorize_resource
 
   def create
     @comment = @post.comments.build content: params[:content], user: current_user
 
     if @comment.save
-      flash[:success] = t ".commented"
+      flash.now[:success] = t ".commented"
       render json: {comment: render_to_string(@post.comments, layout: false)}
     else
       flash.now[:danger] = t ".fail_comment"
@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
 
   def update
     if @comment.update_attributes content: params[:content]
-      flash[:success] = t ".updated"
+      flash.now[:success] = t ".updated"
       render json: {comment: render_to_string(@post.comments, layout: false)}
     else
       flash.now[:danger] = t ".fail_update"
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
 
   def destroy
     if @comment.destroy
-      flash[:success] = t ".comment_deleted"
+      flash.now[:success] = t ".comment_deleted"
       render json: {comment: render_to_string(@post.comments, layout: false)}
     else
       flash[:danger] = t ".fail_delete"

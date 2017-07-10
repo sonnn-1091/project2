@@ -13,7 +13,7 @@
     <span class="edit-btn" id_cmt = "<%= comment.id %>" post_id = "<%= comment.post_id %>">
       <i><%= t ".edit" %></i></span>
     <% end %>
-    <% if can? :delete, comment %>
+    <% if can? :destroy, comment %>
       <span class="delete-btn" id="<%= comment.id %>" post_id = "<%= comment.post_id %>">
         <i><%= t ".delete" %></i></span>
     <% end %>
