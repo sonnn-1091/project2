@@ -80,6 +80,8 @@ en:
     show:
       posted_by: "Posted by"
       ago: "ago"
+    destroy:
+      deleted: "You've deleted post!"
   shared:
     micropost_form:
       post: "Post"

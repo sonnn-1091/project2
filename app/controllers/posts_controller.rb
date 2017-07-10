@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  before_action :load_post, only: [:show, :destroy]
-  load_and_authorize_resource except: [:index, :new, :create]
+  before_action :load_post, only: [:show, :edit, :destroy]
 
   def show
     comments = @post.comments.select :id, :user_id, :post_id, :content, :created_at
@@ -11,11 +10,24 @@ class PostsController < ApplicationController
     post = current_user.posts.build post_params
 
     if post.save
-      flash[:success] = t ".success"
+      flash.now[:success] = t ".success"
       redirect_to post
     else
-      flash[:danger] = t ".fail"
+      flash.now[:danger] = t ".fail"
       redirect_to root_url
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update_attributes post_params
+      flash[:success] = t ".updated"
+      redirect_to @post
+    else
+      flash.now[:danger] = t ".fail_update"
+      render :edit
     end
   end
 

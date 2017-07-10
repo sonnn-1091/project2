@@ -24,6 +24,7 @@
         </div>
       </div>
       <div class="col-md-8">
+        <%= render "shared/error_messages" %>
         <div class="list-post" page="<%= @page %>" total ="<%= @posts.total_pages %>"
           id="view-check" view ="post">
           <%= render @posts %>

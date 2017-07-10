@@ -18,7 +18,7 @@ class Post < ApplicationRecord
   }
 
   def all_tags
-    tags.map(&:name).join(" - ")
+    tags.map(&:name).join ", "
   end
 
   def all_tags= names
