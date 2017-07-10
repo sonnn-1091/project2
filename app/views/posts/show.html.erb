@@ -21,6 +21,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <%= raw @post.content %>
+      <%= social_share_button_tag @post.title, allow_sites: %w(facebook google_plus twitter) %>
     </div>
   </div>
   <div class="row">

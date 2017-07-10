@@ -7,6 +7,7 @@ class Ability
     return unless user
     if user.is_admin
       can :destroy, [Post, Comment]
+      can :update, User
     end
     user_id = user.id
     can :read, :all
