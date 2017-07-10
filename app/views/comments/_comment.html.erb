@@ -9,10 +9,14 @@
     <p><%= comment.content %></p>
     <span><i><%= t ".commented" %> <%= time_ago_in_words comment.created_at %>
       <%= t ".ago" %></i></span>
+    <% if can? :update, comment %>
     <span class="edit-btn" id_cmt = "<%= comment.id %>" post_id = "<%= comment.post_id %>">
       <i><%= t ".edit" %></i></span>
-    <span class="delete-btn" id="<%= comment.id %>" post_id = "<%= comment.post_id %>">
-      <i><%= t ".delete" %></i></span>
+    <% end %>
+    <% if can? :delete, comment %>
+      <span class="delete-btn" id="<%= comment.id %>" post_id = "<%= comment.post_id %>">
+        <i><%= t ".delete" %></i></span>
+    <% end %>
   </div>
 </div>
 <hr>

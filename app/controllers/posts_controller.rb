@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :load_post, only: [:show, :destroy]
+  load_and_authorize_resource except: [:index, :new, :create]
 
   def show
     comments = @post.comments.select :id, :user_id, :post_id, :content, :created_at

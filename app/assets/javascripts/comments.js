@@ -2,8 +2,8 @@ $(document).ready(function(){
   $('body').on('click', '.delete-btn', function(){
     var id = $(this).attr('id');
     var post_id = $(this).attr('post_id');
-    var confirm = confirm(I18n.t('posts.comment.delete'));
-    if (confirm == true){
+    var confirm_delete = confirm(I18n.t('posts.comment.delete'));
+    if (confirm_delete == true){
       $.ajax({
         type: 'DELETE',
         dateType: 'json',

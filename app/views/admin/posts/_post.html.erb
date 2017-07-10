@@ -1,0 +1,14 @@
+<tr>
+  <td><%= link_to post.title, post %></td>
+  <td>
+    <% post.tags.each do |tag| %>
+      <%= link_to tag.name, tag %>
+    <% end %>
+  </td>
+  <td><%= link_to post.user.name, post.user %></td>
+  <td><%= post.created_at.to_formatted_s :db %></td>
+  <td>
+    <%= link_to t(".delete"), post, method: :delete,
+      class: "post-meta delete-button", data: {confirm: t(".sure")} %>
+  </td>
+</tr>

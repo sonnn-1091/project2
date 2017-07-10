@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   before_action :configure_sign_up_params, only: :create, if: :devise_controller?
   before_action :configure_update_params, only: :update, if: :devise_controller?
 
+  def verify_admin!
+    return if current_user.is_admin
+    flash["danger"] = t "danger_not_admin"
+    redirect_to root_path
+  end
+
   protected
 
   def configure_sign_up_params

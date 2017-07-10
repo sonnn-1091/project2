@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :load_post, only: [:create, :update, :destroy]
   before_action :load_cmt, only: [:update, :destroy]
+  load_and_authorize_resource except: [:index, :new, :create]
 
   def create
     @comment = @post.comments.build content: params[:content], user: current_user

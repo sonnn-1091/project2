@@ -1,0 +1,15 @@
+<tr>
+  <td>
+    <%= link_to user do %>
+      <%= image_tag user.avatar %>
+    <% end %>
+  </td>
+  <td><%= link_to user.name, user %></td>
+  <td><%= user.email %></td>
+  <td><%= user.posts.size %></td>
+  <% unless current_user == user %>
+    <td class="status-change" id="<%= user.id %>" status ="<%= user.status %>">
+      <%= user.status ? t(".active") : t(".deactive") %>
+    </td>
+  <% end %>
+</tr>

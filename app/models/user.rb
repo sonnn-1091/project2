@@ -15,6 +15,7 @@ class User < ApplicationRecord
   mount_uploader :avatar, PictureUploader
 
   scope :id_sort, ->{order id: :asc}
+  scope :status_check, ->{where status: true}
 
   def feed
     following_ids = "SELECT followed_id FROM relationships
@@ -32,5 +33,9 @@ class User < ApplicationRecord
 
   def following? other_user
     following.include? other_user
+  end
+
+  def active_for_authentication?
+    super && self.status
   end
 end
