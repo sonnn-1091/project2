@@ -59,5 +59,12 @@ $(document).ready(function(){
     $('#cmt-content').val($(this).closest('.content-cmt').find('p').text());
     var id = $(this).closest('.edit-btn').attr('id_cmt');
     $('#submit-cmt').attr({'id_cmt': id, 'edit': 'true'});
+    $('#cancel-cmt').show();
+  });
+
+  $('#cancel-cmt').click(function(event) {
+    $('#cmt-content').val('');
+    $('#submit-cmt').attr('edit', 'false');
+    $(this).hide();
   });
 });

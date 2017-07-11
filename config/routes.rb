@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "static_pages#home"
   get "/about", to: "static_pages#about"
-  devise_for :users
+  devise_for :user, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   devise_scope :user do
     get "signup", to: "devise/registrations#new"
     post "signup", to: "devise/registrations#create"
