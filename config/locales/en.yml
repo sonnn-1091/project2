@@ -106,3 +106,14 @@ en:
     posts:
       post:
         sure: "Do you want to delete this post"
+  admin:
+    admins:
+      index:
+        user_regis: "Users registration this week"
+        user_day: "Users registration in day of week"
+        active_user: "Actived users"
+    posts:
+      index:
+        post_week: "Posts in this week"
+        post_day: "Posts per day in week"
+        most_tags: "Most used tags"

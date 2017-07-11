@@ -77,6 +77,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    chartkick (2.2.4)
     code_analyzer (0.4.7)
       sexp_processor
     codeclimate-engine-rb (0.4.0)
@@ -132,6 +133,8 @@ GEM
     formatador (0.2.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    groupdate (3.2.0)
+      activesupport (>= 3)
     guard (2.14.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -402,6 +405,7 @@ DEPENDENCIES
   cancancan
   capybara
   carrierwave (= 1.1.0)
+  chartkick
   coffee-rails (~> 4.2)
   config
   database_cleaner
@@ -411,6 +415,7 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-rails
+  groupdate
   guard-rspec
   i18n-js
   jbuilder (~> 2.5)

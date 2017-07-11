@@ -21,4 +21,18 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <h3><%= t ".post_week" %></h3>
+      <%= line_chart @by_week.relation %>
+    </div>
+    <div class="col-xs-6">
+      <h3><%= t ".post_day" %></h3>
+      <%= column_chart @by_day.relation %>
+    </div>
+    <div class="col-xs-6">
+      <h3><%= t ".most_tags" %></h3>
+      <%= pie_chart @tags %>
+    </div>
+  </div>
 </div>

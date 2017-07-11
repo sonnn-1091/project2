@@ -19,6 +19,8 @@
 //= require i18n/translations
 //= require clean-blog
 //= require social-share-button
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 
 $(document).on('turbolinks:request-end', function() {
