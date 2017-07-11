@@ -18,6 +18,7 @@
 //= require i18n.js
 //= require i18n/translations
 //= require clean-blog
+//= require social-share-button
 //= require_tree .
 
 $(document).on('turbolinks:request-end', function() {

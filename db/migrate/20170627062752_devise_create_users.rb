@@ -6,8 +6,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :encrypted_password, null: false
       t.string :avatar
       t.string :remember_digest
-      t.boolean :is_admin
-      t.boolean :status
+      t.boolean :is_admin, default: false
+      t.boolean :status, default: true
       t.datetime :remember_created_at
 
       t.timestamps null: false
